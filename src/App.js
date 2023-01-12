@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+//importing my from react router to set up my routes for SPA
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// importing my pages 
+import About from './pages/About/About'
+import Contact from './pages/Contact/Contact'
+import Projects from './pages/Project/Projects'
+import Home from './pages/Home/Home'
+import Navbar from './Components/Navbar/Navbar'
+
+const App = () => {
+    return (
+        <div>
+        <Navbar></Navbar>
+        <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/contact" element={<Contact />}/>
+            <Route path="/projects" element={<Projects />}/>
+            <Route path="/about" element={<About />}/>
+        </Routes>
+        </div>
+    )
 }
 
-export default App;
+export default App
