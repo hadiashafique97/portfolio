@@ -1,15 +1,25 @@
-
-
+import Typewriter from "typewriter-effect"
+import '../Home/Home.css'
 const Home = () => {
-  
-    return (
-      <div className="container" >
-        <h1 className='text-center' style = {{paddingTop:"30%"}}>
-            THis is my home page 
-        </h1>
+
+  return (
+    <div className="container" >
+      <div className='homepg-logo'>
+
+        <img src="../logo.png" style={{ width: "600px" }} alt="" />
       </div>
-    )
-  
+
+      <Typewriter
+        options={{
+          strings: ['Software Engineer', 'MERN Stack', 'Full Stack', 'Front End', 'Back End'],
+          autoStart: true,
+          loop: true,
+        }}
+      />
+
+    </div>
+  )
+
 }
 
 export default Home

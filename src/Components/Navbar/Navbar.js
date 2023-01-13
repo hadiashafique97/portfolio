@@ -1,92 +1,52 @@
-import React, { useEffect } from 'react'
-import './Navbar.css'
-import { NavLink } from 'react-router-dom'
-import $ from "jquery"
-
+import React from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
+import { useRef } from 'react'
+import { ReactComponent as Logo } from '../../assets/logoone.svg'
+import "./Navbar.css"
+import About from '../../pages/About/About'
+import Contact from '../../pages/Contact/Contact'
+import Projects from '../../pages/Project/Projects'
+import Home from '../../pages/Home/Home'
+import { NavLink } from "react-router-dom"
 function Navbar() {
-    function animation() {
-        var tabsNewAnim = $('#navbarSupportedContent')
-        var activeItemNewAnim = tabsNewAnim.find('active')
-        var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight()
-        var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth()
-        var itemPosNewAnimTop = activeItemNewAnim.position()
-        var itemPosNewAnimLeft = activeItemNewAnim.position()
-        $(".hori-selector").css({
-            "top": itemPosNewAnimTop.top + "px",
-            "left": itemPosNewAnimLeft.left + "px",
-            "height": activeWidthNewAnimHeight.height + "px",
-            "width": activeWidthNewAnimWidth.width + "px"
-        })
-        $("#navbarSupportedContent").on("click", "li", function (e) {
-            $('#navbarSupportedContent ul li').removeClass('active')
-            $(this).addClass('active')
-            var activeWidthNewAnimHeight = $(this).innerHeight()
-            var activeWidthNewAnimWidth = $(this).innerWidth()
-            var itemPosNewAnimTop = $(this).position()
-            var itemPosNewAnimLeft = $(this).position()
-            $(".hori-selector").css({
-                "top": itemPosNewAnimTop.top + "px",
-                "left": itemPosNewAnimLeft.left + "px",
-                "height": activeWidthNewAnimHeight.height + "px",
-                "width": activeWidthNewAnimWidth.width + "px"
-            })
-        })
-    }
+  const navRef = useRef()
 
+  const showNavBar = () => {
+    navRef.current.classList.toggle("responsive_nav")
+  }
+  const hideNavBar =()=>{
+    navRef.current.classList.remove("responsive_nav")
+  }
 
-    return (
-        <nav className='navbar navbar-expand-lg navbar-mainbg'>
-            <NavLink className="navbar-brand navbar-logo" to="/">
-                Hadia Shafique
-            </NavLink>
-            <button className='navbar-toggler' onClick={function () {
-                setTimeout(function () { animation() })
-            }} type='button' data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-                <i className='fas fa-bars text-white'></i>
+  return (
+    <header>
+      <div>
+        <img src={require('../../assets/logoone.svg').default} alt="" />
+      </div>
+      <nav ref={navRef}>
+        <NavLink onClick={hideNavBar} to="/">
+          Home
+        </NavLink>
 
-            </button>
-            <div className='collapse navbar-collapse' id="navbarSupportedContent">
-                <ul className='navbar-nav ms-auto'>
-                    <div className='hori-selector'>
-                        <div className='left'></div>
-                        <div className='right'></div>
-                    </div>
-                    <li className='nav-item active'>
-                        <NavLink className="nav-link" to="/">
-                            <i className='fas fa-tachometer-alt'>
-                                Home
-                            </i>
+        <NavLink onClick={hideNavBar}  to="/projects">
+          Projects
+        </NavLink>
+        <NavLink  onClick={hideNavBar} to="/contact">
+          Contact
+        </NavLink>
+        <NavLink onClick={hideNavBar} to="/about">
+          About
+        </NavLink>
 
-                        </NavLink>
-                    </li>
-                    <li className='nav-item active'>
-                        <NavLink className="nav-link" to="/about">
-                            <i className='fas fa-tachometer-alt'>
-                                About
-                            </i>
-
-                        </NavLink>
-                    </li>
-                    <li className='nav-item active'>
-                        <NavLink className="nav-link" to="/contact">
-                            <i className='fas fa-tachometer-alt'>
-                                Contact
-                            </i>
-
-                        </NavLink>
-                    </li>
-                    <li className='nav-item active'>
-                        <NavLink className="nav-link" to="/projects">
-                            <i className='fas fa-tachometer-alt'>
-                                Projects
-                            </i>
-
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    )
+        <button className="nav-btn nav-close-btn" onClick={hideNavBar}>
+          <FaTimes />
+        </button>
+      </nav>
+      <button className="nav-btn" onClick={showNavBar}>
+        <FaBars />
+      </button>
+    </header>
+  )
 }
 
 export default Navbar

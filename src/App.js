@@ -1,24 +1,28 @@
 //importing my from react router to set up my routes for SPA
-import { Route, BrowserRouter, Routes } from 'react-router-dom'
-
-// importing my pages 
+import { Route, Routes } from "react-router-dom"
+import React from "react"
+import Navbar from "./Components/Navbar/Navbar"
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import Projects from './pages/Project/Projects'
 import Home from './pages/Home/Home'
-import Navbar from './Components/Navbar/Navbar'
 
 const App = () => {
     return (
-        <div>
-        <Navbar></Navbar>
-        <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/contact" element={<Contact />}/>
-            <Route path="/projects" element={<Projects />}/>
-            <Route path="/about" element={<About />}/>
-        </Routes>
-        </div>
+        // <div>
+        // <React.Fragment>
+        //     <Navbar/>
+        // </React.Fragment>
+        // </div>
+        <div className="App">
+      <Navbar />
+    <Routes>
+      <Route path="/" element={<About/>}/>
+      <Route path="/about" element={<Home/>}/>
+      <Route path="/projects" element={<Projects/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+    </Routes>
+    </div>
     )
 }
 
