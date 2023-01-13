@@ -24,11 +24,10 @@ header {
     color: var(--textColor);
 }
 
-header Logo {
-    display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
-    
+.logo-img{
+    float: left;
+    margin: -25px;
+    padding-top: -200px;
 }
 
 nav a {

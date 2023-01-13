@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <header>
-      <div>
+      <div className='logo-img'>
         <img src={require('../../assets/logoone.svg').default} alt="" />
       </div>
       <nav ref={navRef}>
