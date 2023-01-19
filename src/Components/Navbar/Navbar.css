@@ -24,10 +24,13 @@ header {
     color: var(--textColor);
 }
 
-.logo-img{
+.navbar-logo{
     float: left;
-    margin: -25px;
-    padding-top: -200px;
+   width: 200px;
+   height: 200px;
+   overflow: none;
+   margin-top: -6px;
+    
 }
 
 nav a {

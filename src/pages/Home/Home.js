@@ -4,9 +4,9 @@ const Home = () => {
 
   return (
     <div className="container" >
-      <div className='homepg-logo'>
 
-        <img src="../logo.png" style={{ width: "600px" }} alt="" />
+      <div className='homepg-logo'>
+        <img src={require('../../assets/logomain.svg').default} alt="" />
       </div>
 
       <Typewriter
