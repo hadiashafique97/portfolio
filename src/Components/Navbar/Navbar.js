@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { useRef } from 'react'
 // import { ReactComponent as Logo } from '../../assets/logoone.svg'
@@ -8,22 +9,35 @@ import { NavLink } from "react-router-dom"
 import BurgerMenu from "../BurgerMenu"
 function Navbar() {
   const navRef = useRef()
-  
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [location, setLocation] = useState(null);
+
+  useEffect(() => {
+    setLocation(window.location.pathname);
+
+    if (location === "/") {
+      
+    }
+  }, [location]);
   const handleBurgerMenu = () => {
     navRef.current.classList.toggle("responsive_nav")
   }
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav")
   }
-  const hideNavBar =()=>{
+  const hideNavBar = () => {
     navRef.current.classList.remove("responsive_nav")
   }
 
   return (
+    
+
+
+
     <header>
-      
+
         <img  className="navbar-logo"src={require('../../assets/markup-cropped.svg').default} alt="" />
-      
+
       <nav ref={navRef}>
         <NavLink onClick={hideNavBar} to="/">
           Home

@@ -1,3 +1,16 @@
-.{
-    
-}
+.flex.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .gap1 {
+    gap: 10px;
+  }
+  
+  img {
+    width: 650px;
+    height: auto;
+    max-width: 650p;
+  }
