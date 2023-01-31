@@ -59,6 +59,7 @@ header div,
 nav {
     display: flex;
     align-items: center;
+    background: transparent;
 }
 
 @media only screen and (max-width: 1024px) {

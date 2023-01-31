@@ -3,11 +3,15 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { useRef } from 'react'
 // import { ReactComponent as Logo } from '../../assets/logoone.svg'
 import "./Navbar.css"
-
+import "../../styles/structure.css"
 import { NavLink } from "react-router-dom"
+import BurgerMenu from "../BurgerMenu"
 function Navbar() {
   const navRef = useRef()
-
+  
+  const handleBurgerMenu = () => {
+    navRef.current.classList.toggle("responsive_nav")
+  }
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav")
   }

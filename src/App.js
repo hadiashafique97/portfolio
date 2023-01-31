@@ -6,14 +6,10 @@ import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import Projects from './pages/Project/Projects'
 import Home from './pages/Home/Home'
-
+import '../src/styles/structure.css'
 const App = () => {
     return (
-        // <div>
-        // <React.Fragment>
-        //     <Navbar/>
-        // </React.Fragment>
-        // </div>
+        
         <div className="App">
       <Navbar />
     <Routes>
