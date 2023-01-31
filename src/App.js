@@ -7,6 +7,8 @@ import Contact from './pages/Contact/Contact'
 import Projects from './pages/Project/Projects'
 import Home from './pages/Home/Home'
 import '../src/styles/structure.css'
+import '../src/styles/Colors.css'
+import '../src/styles/App.css'
 const App = () => {
     return (
         

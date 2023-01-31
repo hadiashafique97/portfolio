@@ -35,6 +35,7 @@ function Navbar() {
 
 
     <header>
+      
 
         <img  className="navbar-logo"src={require('../../assets/markup-cropped.svg').default} alt="" />
 
@@ -57,7 +58,7 @@ function Navbar() {
         </button>
       </nav>
       <button className="nav-btn" onClick={showNavBar}>
-        <FaBars />
+      <i class="ri-menu-fold-line"></i>
       </button>
     </header>
   )

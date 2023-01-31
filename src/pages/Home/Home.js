@@ -10,27 +10,31 @@ const Home = () => {
     setShowImage(!showImage);
   }
   useEffect(() => {
-    setShowImage(false);
+    setShowImage(false)
     setTimeout(() => {
-      setShowImage(true);
+      setShowImage(true)
+      setTimeout(() => {
+        setShowAnimation(true)
+      }, 1000)
     }, 0);
   }, [])
   return (
   
-    <div className="flex flex-column justify-center maut ">
+    <div className="flex flex-column justify-center maut background-color">
      
       <div className="flex flex-column justify-center item-center gap1" >
         
-        {showImage && <img className='animate__animated animate__zoomInUp' src={require('../../assets/logomain.svg').default} alt="main page logo" />}
-
-
-        <Typewriter
+        {showImage && <img className='animate__animated animate__zoomInUp ' src={require('../../assets/logomain.svg').default} alt="main page logo" />}
+         
+        {showAnimation && (
+        <Typewriter 
           options={{
             strings: ['Software Engineer', 'MERN Stack', 'Full Stack', 'Front End', 'Back End'],
             autoStart: true,
             loop: true,
           }}
         />
+        )}
       </div>
     </div>
  

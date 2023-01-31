@@ -1,25 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
-html {
-    box-sizing: border-box;
-  }
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-  
+body {
+   font-family: 'Oswald', sans-serif;
+}
+i{
+    font-family: 'Oswald', sans-serif !important;
+}
 * {
+    font-weight: bolder;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Titillium Web", sans-serif;
-}
-
-:root {
-    --mainColor: #29335c;
-    --mainColorLight: #5767aa;
-    --secondaryColor: #db2b39;
-    --textColor: #eee;
 }
 
 header {
+    font-family: 'Oswald', sans-serif !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,18 +23,23 @@ header {
     padding: 0 2rem;
     background-color: var(--mainColor);
     color: var(--textColor);
+
 }
 
-.navbar-logo{
+.navbar-logo {
     float: left;
-   width: 200px;
-   height: 200px;
-   overflow: none;
-   margin-top: -6px;
-    
+    width: 200px;
+    height: 200px;
+    overflow: none;
+    margin-top: -6px;
+
 }
 
+nav{
+    font-family: 'Oswald', sans-serif !important;
+}
 nav a {
+    font-family: 'Oswald', sans-serif !important;
     margin: 0 1rem;
     color: var(--textColor);
     text-decoration: none;
@@ -47,11 +48,16 @@ nav a {
 nav a:hover {
     transform: scale(1.1);
     color: var(--secondaryColor);
-    
+
+}
+
+button i:hover {
+    transform: scale(1.1);
+    color: var(--secondaryColor);
 }
 
 header .nav-btn {
-    
+
     padding: 5px;
     cursor: pointer;
     background: transparent;
@@ -65,6 +71,7 @@ header .nav-btn {
 
 header div,
 nav {
+    font-family: 'Oswald', sans-serif !important;
     display: flex;
     align-items: center;
     background: transparent;
@@ -78,13 +85,12 @@ nav {
     }
 
     header nav {
-
-     position: fixed;
+        font-family: 'Oswald', sans-serif !important;
+        position: fixed;
         top: 0;
-       
-        left:0px;
+        left: 0px;
         height: 100%;
-        width: 250px; /* adjust width of sidebar */
+        width: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -92,26 +98,16 @@ nav {
         gap: 1.5rem;
         background-color: var(--mainColor);
         transition: 1s;
-        transform: translateX(-100%); /* hide the sidebar offscreen */
+        transform: translateX(-100%);
+      
         z-index: 1;
-        /* position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        background-color: var(--mainColor);
-        transition: 1s;
-        transform: translateY(-100vh); */
+        
     }
 
     header .responsive_nav {
-        /* transform: none; */
-        transform: translateX(0); /* show the sidebar */
+  
+        transform: translateX(0);
+       
 
     }
 
@@ -122,15 +118,22 @@ nav {
         top: 2rem;
         right: 2rem;
     }
-    nav .nav-btn:hover{
+
+    nav .nav-btn:hover {
         transform: scale(1.1);
         cursor: pointer;
+        color: var(--secondaryColor);
     }
-nav .nav-close-btn:hover{
-    color: var(--secondaryColor);
-}
+
+    nav .nav-close-btn:hover {
+        color: var(--secondaryColor);
+    }
+
     nav a {
         cursor: pointer;
         font-size: 1.5rem;
     }
 }
+.navbar {
+    font-family: 'Oswald', sans-serif !important;
+ }
