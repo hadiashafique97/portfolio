@@ -39,17 +39,17 @@ function Navbar() {
         <img  className="navbar-logo"src={require('../../assets/markup-cropped.svg').default} alt="" />
 
       <nav ref={navRef}>
-        <NavLink onClick={hideNavBar} to="/">
-          Home
+        <NavLink  onClick={hideNavBar} to="/">
+          <i class="ri-home-fill">Home</i>
         </NavLink>
         <NavLink onClick={hideNavBar}  to="/projects">
-          Projects
+          <i class="ri-folder-chart-fill">Projects</i>
         </NavLink>
         <NavLink  onClick={hideNavBar} to="/contact">
-          Contact
+          <i class="ri-contacts-book-2-fill">Contact</i>
         </NavLink>
         <NavLink onClick={hideNavBar} to="/about">
-          About
+          <i class="ri-map-pin-user-fill">About</i>
         </NavLink>
 
         <button className="nav-btn nav-close-btn" onClick={hideNavBar}>
