@@ -1,6 +1,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 /* ==========================================================================
    Responsive images and box padding
    ========================================================================== */
@@ -23,9 +25,9 @@ object {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.3rem;
-  background: #fefefe;
+  background: #dfcaa0;
 }
 
 .container {
@@ -35,4 +37,7 @@ body {
 h1 {
   font-size: 3em;
   font-weight: 600;
+}
+.body-background{
+  background-color: #dfcaa0;
 }
