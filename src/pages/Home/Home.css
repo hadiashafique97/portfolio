@@ -18,9 +18,9 @@
   }
   
   img {
-    width: 650px;
+    width: 950px;
     height: auto;
-    max-width: 650p;
+    max-width: 100%;
   }
 
   .animate__zoomInUp{

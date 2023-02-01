@@ -1,6 +1,9 @@
 
 import React, { useEffect, useState } from 'react'
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faApple, faGithub, faLinkedin, } from "@fortawesome/free-brands-svg-icons"
+import { FaReact , FaNodeJs,FaHtml5, FaLaptopCode } from 'react-icons/fa'
+import { SiJavascript, SiExpress, SiCss3,SiMongodb } from "react-icons/si"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "../About/About.css"
 
@@ -18,10 +21,12 @@ function About() {
         <h1 >
         About 
       </h1>
+      <hr></hr>
       </div>
+      
       <div className='about-para'>
         <p className="about-text">
-        A Paragraph explaining all the amazing skills I have, all the great experiences I have delivered and why I am such an asset to any company I work for
+        I am an aspiring Software Engineer Professional who constantly seeks out innovative solutions to everyday problems. I recently graduated from <a lassName='link' href="https://www.perscholas.org">PerScholas</a> MERN Stack Software Engineering Bootcamp. I have four years of experience in the Tech World working at <FontAwesomeIcon  icon={faApple}  /> , totalling 7+ years of work eperience in the Customer Service Industry. I am looking for my next adventure as a Software Engineer or Developer.
       </p>
       </div>
       <div className='about-img'>
@@ -36,6 +41,19 @@ function About() {
  />
       </a>
       </div>
+      <div className='skills'>
+        <h4>Skills</h4>
+        <hr></hr>
+        <FaReact/> React  
+        <FaNodeJs/> Node.Js  
+        <SiJavascript/> JavaScript <br></br>
+        <SiExpress/>Express.Js 
+        <FaHtml5/> HTML5 
+        <SiCss3/> CSS
+        <SiMongodb/> MongoDB 
+        <FaLaptopCode/>Programming
+      </div>
+      
     </div>
     </div>
   )

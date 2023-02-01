@@ -16,7 +16,7 @@ function Navbar() {
     setLocation(window.location.pathname);
 
     if (location === "/") {
-      
+
     }
   }, [location]);
   const handleBurgerMenu = () => {
@@ -30,35 +30,38 @@ function Navbar() {
   }
 
   return (
-    
+
 
 
 
     <header>
-      
 
-        <img  className="navbar-logo"src={require('../../assets/markup-cropped.svg').default} alt="" />
+
+      <img className="navbar-logo" src={require('../../assets/markup-cropped.svg').default} alt="Hadia Shafique" title='Hadia Shafique' />
 
       <nav ref={navRef}>
-        <NavLink  onClick={hideNavBar} to="/">
+        <NavLink onClick={hideNavBar} to="/">
           <i class="ri-home-fill">Home</i>
         </NavLink>
-        <NavLink onClick={hideNavBar}  to="/projects">
-          <i class="ri-folder-chart-fill">Projects</i>
-        </NavLink>
-        <NavLink  onClick={hideNavBar} to="/contact">
-          <i class="ri-contacts-book-2-fill">Contact</i>
-        </NavLink>
+
         <NavLink onClick={hideNavBar} to="/about">
           <i class="ri-map-pin-user-fill">About</i>
         </NavLink>
+
+        <NavLink onClick={hideNavBar} to="/projects">
+          <i class="ri-folder-chart-fill">Projects</i>
+        </NavLink>
+        <NavLink onClick={hideNavBar} to="/contact">
+          <i class="ri-contacts-book-2-fill">Contact</i>
+        </NavLink>
+
 
         <button className="nav-btn nav-close-btn" onClick={hideNavBar}>
           <FaTimes />
         </button>
       </nav>
       <button className="nav-btn" onClick={showNavBar}>
-      <i class="ri-menu-fold-line"></i>
+        <i class="ri-menu-fold-line"></i>
       </button>
     </header>
   )
