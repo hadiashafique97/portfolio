@@ -26,11 +26,11 @@ function About() {
       
       <div className='about-para'>
         <p className="about-text">
-        I am an aspiring Software Engineer Professional who constantly seeks out innovative solutions to everyday problems. I recently graduated from <a className='link' href="https://www.perscholas.org">PerScholas</a> MERN Stack Software Engineering Bootcamp. I have four years of experience in the Tech World working at <FontAwesomeIcon  icon={faApple}  /> , totalling 7+ years of work eperience in the Customer Service Industry. I am looking for my next adventure as a Software Engineer or Developer.
+        I am an aspiring Software Engineer Professional who constantly seeks out innovative solutions to everyday problems. I recently graduated from <a className='link' href="https://www.perscholas.org">PerScholas</a> MERN Stack Software Engineering Bootcamp. I have four years of experience in the Tech World working at <FontAwesomeIcon  icon={faApple}  /> , totalling 7+ years of work experience in the Customer Service Industry. I am looking for my next adventure as a Software Engineer or Developer.
       </p>
       </div>
       <div className='about-img'>
-         <img  src="../../../pp.png"></img>
+         <img  src="../../../pp.png" ></img>
       </div>
       <div className='about-logo'>
         <a className='github-logo' href="https://github.com/hadiashafique97">
